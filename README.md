@@ -13,6 +13,18 @@ Mac users can use homebrew.
 
 Install YARN https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
 
+## Running the server
+
+```
+bundle install
+rails s
+```
+
+In another tab you can run webpacker to watch for changes to assets
+
+```
+bin/webpack-dev-server
+```
 
 ## Known issues
 
