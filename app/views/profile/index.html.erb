@@ -1,0 +1,14 @@
+<h1>Profile</h1>
+<h2>Tweets</h2>
+<ul>
+  <% @tweets.select do |tweet| %>
+    <% if tweet.account_id == current_account.id %>
+      <li>
+        <%= current_account.name %>
+        @<%= current_account.username %>
+        <%= tweet.content  %>
+        <%= tweet.created_at %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
