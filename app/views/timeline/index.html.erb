@@ -12,3 +12,15 @@
     </li>
   <% end %>
 </ul>
+
+<h2>Tweets</h2>
+<ul>
+  <% @tweets.reverse.select do |tweet| %>
+    <li>
+      <%# add correct account name %>
+      <%# add correct account username %>
+      <%= tweet.content %>
+      <%= tweet.created_at %>
+    </li>
+  <% end %>
+</ul>
