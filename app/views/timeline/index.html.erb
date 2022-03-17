@@ -17,8 +17,8 @@
 <ul>
   <% @tweets.reverse.select do |tweet| %>
     <li>
-      <%# add correct account name %>
-      <%# add correct account username %>
+      <%= tweet.account.name %>
+      @<%= tweet.account.username %>
       <%= tweet.content %>
       <%= tweet.created_at %>
     </li>
