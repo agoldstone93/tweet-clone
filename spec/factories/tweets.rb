@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :tweet do
-    content { "MyText" }
+    account
   end
 end
