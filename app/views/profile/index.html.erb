@@ -1,4 +1,8 @@
 <h1>Profile</h1>
+  <ul>
+    <li>Username: @<%= current_account.username %></li>
+    <li>Name: <%= current_account.name %></li>
+  </ul>
 <h2>Tweets</h2>
 <ul>
   <% @tweets.reverse.select do |tweet| %>
