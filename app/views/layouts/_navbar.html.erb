@@ -1,10 +1,12 @@
 <header>
   <nav>
-    <br>
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Sign In", new_account_session_path %></li>
-    <li><%= link_to "Sign Out", destroy_account_session_path, method: :delete %></li>
-    <li><%= link_to "Profile", profile_path %></li>
-    <li><%= link_to "Edit Account", edit_account_registration_path %></li>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Create new tweet", new_tweet_path %></li>
+      <li><%= link_to "Sign In", new_account_session_path %></li>
+      <li><%= link_to "Sign Out", destroy_account_session_path, method: :delete %></li>
+      <li><%= link_to "Profile", profile_path %></li>
+      <li><%= link_to "Edit Account", edit_account_registration_path %></li>
+    </ul>
   </nav>
 </header>
