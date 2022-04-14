@@ -12,7 +12,7 @@ describe 'Authentication' do
         fill_in 'Email', with: account.email
         fill_in 'Password', with: account.password
         click_button 'Log in'
-        expect(page).to have_content "Hello #{account.name}"
+        expect(page).to have_content "Signed in successfully."
       end
     end
   end
