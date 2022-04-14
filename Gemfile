@@ -50,8 +50,8 @@ end
 
 group :development, :test do
   gem 'rubocop', require: false
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
