@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -5,12 +7,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :name])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:username, :name])
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[username name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[username name])
+  end
 
-  def authenticate_account! (_opts = {})
+  def authenticate_account!(_opts = {})
     if account_signed_in?
       super
     else

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TweetsController < ApplicationController
   before_action :authenticate_account!
 
@@ -24,7 +26,8 @@ class TweetsController < ApplicationController
   end
 
   private
-    def tweet_params
-      params.require(:tweet).permit(:content)
-    end
+
+  def tweet_params
+    params.require(:tweet).permit(:content)
+  end
 end
