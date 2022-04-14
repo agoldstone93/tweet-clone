@@ -1,3 +1,22 @@
 // Place all the styles related to the Timeline controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.tweet-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  grid-auto-rows: 2;
+  max-width: 400px;
+
+  .tweet-content {
+    grid-column: 1 / 4;
+  }
+
+  .name {
+    font-size: large;
+    font-weight: bold;
+  }
+}
+
+

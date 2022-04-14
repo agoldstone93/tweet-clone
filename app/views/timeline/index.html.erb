@@ -16,11 +16,11 @@
 <h2>Tweets</h2>
 <ul>
   <% @tweets.reverse.select do |tweet| %>
-    <li>
-      <%= tweet.account.name %>
-      @<%= tweet.account.username %>
-      <%= tweet.content %>
-      <%= tweet.created_at %>
-    </li>
+    <div class="tweet-container">
+      <div class='name'><%= tweet.account.name %></div>
+      <div class='username'>@<%= tweet.account.username %></div>
+      <div class='created'><%= time_ago_in_words(tweet.created_at) %></div>
+      <div class='tweet-content'><%= tweet.content %></div>
+    </div>
   <% end %>
 </ul>
