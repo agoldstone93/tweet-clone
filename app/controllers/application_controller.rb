@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :name])
       devise_parameter_sanitizer.permit(:account_update, keys: [:username, :name])
     end
+
+  def authenticate_account!
+    if account_signed_in?
+      super
+    else
+      redirect_to account_session_path
+    end
+  end
 end
