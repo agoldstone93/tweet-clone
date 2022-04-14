@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update, keys: [:username, :name])
     end
 
-  def authenticate_account!
+  def authenticate_account! (_opts = {})
     if account_signed_in?
       super
     else
