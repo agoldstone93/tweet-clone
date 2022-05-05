@@ -4,15 +4,8 @@
     <li>Name: <%= current_account.name %></li>
   </ul>
 <h2>Tweets</h2>
-<ul>
-  <% @tweets.reverse.select do |tweet| %>
-    <% if tweet.account_id == current_account.id %>
-      <li>
-        <%= current_account.name %>
-        @<%= current_account.username %>
-        <%= tweet.content  %>
-        <%= tweet.created_at %>
-      </li>
-    <% end %>
+<% @tweets.reverse.select do |tweet| %>
+  <% if tweet.account_id == current_account.id %>
+    <%= render "shared/tweet", tweet: tweet %>
   <% end %>
-</ul>
+<% end %>
