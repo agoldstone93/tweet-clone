@@ -11,8 +11,8 @@ describe 'Account exists' do
     it 'Can see most recent tweets, reverse chronologically' do
       login_as(account, scope: :account)
       visit profile_path
-      expect(page).to have_selector('li:nth-child(2)', text: 'test first tweet')
-      expect(page).to have_selector('li:nth-child(1)', text: 'test second tweet')
+      expect(page).to have_selector('div:nth-child(2)', text: 'test first tweet')
+      expect(page).to have_selector('div:nth-child(1)', text: 'test second tweet')
     end
 
     it 'Can see name and username' do
