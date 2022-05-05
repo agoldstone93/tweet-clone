@@ -49,10 +49,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'faker', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'faker', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
