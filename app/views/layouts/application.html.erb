@@ -14,7 +14,12 @@
     <%= render "layouts/navbar" %>
     <% flash.each do |type, message| %>
       <div class='flash'>
-        <%= message %>
+        <div class='flash-type'>
+          <%= type.capitalize %>
+        </div>
+        <div class='flash-message'>
+          <%= message %>
+        </div>
       </div>
     <% end %>
     <%= yield %>
