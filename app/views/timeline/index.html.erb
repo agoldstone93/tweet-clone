@@ -1,19 +1,5 @@
 <h1>Timeline</h1>
 
-<% if account_signed_in? %>
-  <h1>Hello <%= current_account.name %></h1>
-<% end %>
-
-<h1>All Accounts:</h1>
-<ul>
-  <% @accounts.each do |account| %>
-    <li>
-      <%= account.email %>
-    </li>
-  <% end %>
-</ul>
-
-
 <h2>Tweets</h2>
 <% @tweets.reverse.select do |tweet| %>
   <%= render "shared/tweet", tweet: tweet %>
