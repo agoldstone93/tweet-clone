@@ -13,19 +13,19 @@ describe 'Account exists' do
   let!(:tweet2) { FactoryBot.create(:tweet, account: account2, content: 'Tweet should be invisible') }
 
   # account 3 follows account 1 but not 2
-  
-
-  context 'Navigate to timeline page' do
-    it 'Can see account 1 tweet' do
-      login_as(account3, scope: :account)
-      visit root
-      expect(page).to have_content('This tweet should be visible')
-    end
-
-    it 'Cannot see account 2 tweet' do
-      login_as(account3, scope: :account)
-      visit root
-      expect(page).to have_no_content('This tweet should be invisible')
+  context 'Account 3 follows account 1 but not account 2' do
+    context 'when account 3 navigates to timeline page' do
+      it 'Can see account 1 tweet on my timeline' do
+        login_as(account3, scope: :account)
+        visit root
+        expect(page).to have_content('This tweet should be visible')
+      end
+      
+      it 'Cannot see account 2 tweet' do
+        login_as(account3, scope: :account)
+        visit root
+        expect(page).to have_no_content('This tweet should be invisible')
+      end
     end
   end
 end
