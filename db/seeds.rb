@@ -26,3 +26,11 @@ end
 30.times do
   Tweet.create(content: Faker::Lorem.sentence(word_count: 3), account_id: rand(1..6))
 end
+
+# generate following relationships
+accounts = Account.all
+account = accounts.first
+following = accounts[2..4]
+followers = accounts[3..5]
+following.each { |followed| account.follow(followed) }
+followers.each { |follower| follower.follow(account) }
