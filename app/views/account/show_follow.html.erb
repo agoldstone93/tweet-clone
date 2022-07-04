@@ -1,0 +1,12 @@
+<h1><%= @title %></h1>
+
+<% if @accounts.any? %>
+  <ul>
+    <% @accounts.each do |account| %>
+      <li><%= account.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No accounts found</p>
+<% end %>
+

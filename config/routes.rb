@@ -8,7 +8,13 @@ Rails.application.routes.draw do
   root 'timeline#index'
 
   resources :tweets
-
-  devise_for :accounts
+  
+  devise_for :accounts 
+  
+  resources :account do
+    member do
+      get :following, :followers
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
