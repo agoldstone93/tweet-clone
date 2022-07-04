@@ -3,7 +3,8 @@
 <h2>Tweets</h2>
 
 <% if account_signed_in? %>
-  <% @following_tweets.reverse.select do |tweet| %>
+  <% tweets = @following_tweets + current_account.tweets%>
+  <% tweets.reverse.select do |tweet| %>
     <%= render "shared/tweet", tweet: tweet %>
   <% end %>
 <% end %>
