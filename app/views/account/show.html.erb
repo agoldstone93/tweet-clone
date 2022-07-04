@@ -1,0 +1,15 @@
+<% if @account %>
+  <h1>Profile</h1>
+    <ul>
+      <li>Username: @<%= @account.username %></li>
+      <li>Name: <%= @account.name %></li>
+    </ul>
+  <h2>Tweets</h2>
+  <% @tweets.reverse.select do |tweet| %>
+    <% if tweet.account_id == @account.id %>
+      <%= render "shared/tweet", tweet: tweet %>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>No account found</p>
+<% end %>
