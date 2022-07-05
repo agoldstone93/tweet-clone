@@ -2,8 +2,12 @@
   <%= image_tag("blank-profile-picture-small.jpg", class: "profile_picture") %>
   <div class="tweet-container">
     <div class='name-container'>
-      <div class='name'><%= tweet.account.name %></div>
-      <div class='username'>@<%= tweet.account.username %></div>
+      <div class='name'>
+        <%= link_to tweet.account.name, account_path(tweet.account) %>
+      </div>
+      <div class='username'>
+        @<%= tweet.account.username %>
+      </div>
     </div>
     <div class='created'><%= time_ago_in_words(tweet.created_at) %> ago</div>
     <div class='tweet-content'><%= tweet.content %></div>

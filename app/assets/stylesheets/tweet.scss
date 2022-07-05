@@ -32,12 +32,18 @@
       font-weight: bold;
       margin-top: auto;
       padding-right: 5px;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   
     .username {
       color: grey;
       margin-top: auto;
-  
     }
   
     .created {

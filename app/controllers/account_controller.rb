@@ -1,4 +1,6 @@
 class AccountController < ApplicationController
+  before_action :authenticate_account!, only: [:following, :followers]
+
   def following
     @title = "Following"
     @account = Account.find(params[:id])
