@@ -32,7 +32,7 @@ describe 'Account exists' do
       it 'Can click on account 1 name to navigate to account 1 profile page' do
         visit root_path
         click_link account1.name
-        expect(page.current_path).to be account_path(account1)
+        expect(page.current_path).to eq account_path(account1)
       end
     end
   end
