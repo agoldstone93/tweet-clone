@@ -1,3 +1,19 @@
 // Place all the styles related to the Timeline controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.timeline-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.left-column {
+  width: 250px;
+}
+
+.right-column {
+  border: 1px solid black;
+}

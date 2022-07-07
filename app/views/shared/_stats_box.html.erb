@@ -1,0 +1,24 @@
+<div class="stats-box-container">
+  <div class='account-info'>
+    <%= image_tag("blank-profile-picture-small.jpg", class: "profile_picture") %>
+
+    <div class='account-name'>
+      <div><%= account.name %></div>
+      <div>@<%= account.username %></div>
+    </div>
+  </div>
+  <div class='stats'>
+    <div class='tweets-num'>
+      <div>Tweets</div>
+      <div><%= account.tweets.count %></div>
+    </div>
+    <div class='following-num'>
+      <div>Following</div>
+      <div>1234</div>
+    </div>
+    <div class='followers-num'>
+      <div>Followers</div>
+      <div>2345</div>
+    </div>
+  </div>
+</div>

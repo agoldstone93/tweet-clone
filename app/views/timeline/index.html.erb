@@ -1,6 +1,12 @@
 <h1>Timeline</h1>
-
-<h2>Tweets</h2>
-<% @tweets.reverse.select do |tweet| %>
-  <%= render "shared/tweet", tweet: tweet %>
-<% end %>
+<div class='timeline-container'>
+  <div class='left-column'>
+    <%= render 'shared/stats_box', account: current_account %>
+  </div>
+  <div class='right-column'>
+    <h2>Tweets</h2>
+    <% @tweets.reverse.select do |tweet| %>
+      <%= render "shared/tweet", tweet: tweet %>
+    <% end %>
+  </div>
+</div>

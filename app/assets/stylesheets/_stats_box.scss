@@ -1,0 +1,29 @@
+.stats-box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.account-name {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile_picture {
+  width: 80px;
+}

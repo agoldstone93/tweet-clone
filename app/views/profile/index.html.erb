@@ -1,13 +1,16 @@
 <h1>Profile</h1>
-  <ul>
-    <li>Username: @<%= current_account.username %></li>
-    <li>Name: <%= current_account.name %></li>
-  </ul>
-<h2>Tweets</h2>
-<div class="tweets-">
-  <% @tweets.reverse.select do |tweet| %>
-    <% if tweet.account_id == current_account.id %>
-      <%= render "shared/tweet", tweet: tweet %>
-    <% end %>
-  <% end %>
+<div class="profile-container">
+  <div class='left-column'>
+    <%= render 'shared/stats_box', account: current_account %>
+  </div>
+  <div class='right-column'>
+    <h2>Tweets</h2>
+    <div class="tweets-">
+      <% @tweets.reverse.select do |tweet| %>
+        <% if tweet.account_id == current_account.id %>
+          <%= render "shared/tweet", tweet: tweet %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
